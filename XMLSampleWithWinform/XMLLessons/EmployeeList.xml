@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Calisanlar>
+	<Calisan TCNo="12345678901">
+		<Adi>Türhan</Adi>
+		<Soyadi>YILDIRIM</Soyadi>
+		<DogumYili>1973</DogumYili> 
+	</Calisan>
+	<Calisan TCNo="12345678902">
+		<Adi>Bekir</Adi>
+		<Soyadi>ARSLAN</Soyadi>
+		<DogumYili>1969</DogumYili>
+	</Calisan>
+	<Calisan TCNo="12345678903">
+		<Adi>Zübeyir</Adi>
+		<Soyadi>Tercan</Soyadi>
+		<DogumYili>1988</DogumYili>
+	</Calisan>	
+	
+	
+</Calisanlar> 
+
