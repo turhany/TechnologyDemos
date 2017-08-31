@@ -1,0 +1,42 @@
+<p>
+  {{title}}
+</p>
+
+<!-- Agular2 -->
+<!-- <div class="form-group">
+  <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="enter your filter text"/>
+</div>
+<div class="form-group">
+  <label>you searched for <strong>{{filterText}}</strong></label>
+</div> -->
+
+<!-- Angular4 -->
+<!-- <input [value]="username" (input)="username = $event.target.value">
+<p>Hello {{username}}!</p> -->
+<!-- https://blog.thoughtram.io/angular/2016/10/13/two-way-data-binding-in-angular-2.html -->
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="enter your filter text" (input)="filterText = $event.target.value"/>
+</div>
+
+<div class="form-group" *ngIf="filterText">
+  <label>you searched for <strong>{{filterText}}</strong></label>
+</div>
+
+<table class="table table-responsive">
+  <thead>
+    <th>Product Id</th>
+    <th>Category Id</th>
+    <th>Product Name</th>
+    <th>Product Name</th>
+    <th>Unit Price</th>
+    <th>Units In Stock</th>
+  </thead>
+  <tr *ngFor="let item of products | productsfilter:filterText">
+    <td>{{item.productId}}</td>
+    <td>{{item.categoryId}}</td>
+    <td>{{item.produtName | uppercase}}</td>
+    <td>{{item.produtName | lowercase}}</td>    
+    <td>{{item.unitPrice | currency:'USD':true:'1.2-2'}}</td>
+    <td>{{item.unitsInStock}}</td>
+  </tr>
+</table>

@@ -1,0 +1,17 @@
+vscode
+node
+angular cli install
+ng new <proje adı>
+ng serve 
+ng generate component <adı>
+
+product component için servis oluşturmak için product klasöründe 
+ng generate service <servis adı>
+
+pacjkage.json yeni paket eklemek için  dependecies içine yazılır 
+ve uygula root kısmında
+npm install 
+
+pipe için product klasöründe 
+ng generate pipe <pipe adı>
+
