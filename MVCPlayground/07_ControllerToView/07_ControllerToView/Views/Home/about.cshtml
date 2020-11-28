@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>about</title>
+</head>
+<body>
+    <div> 
+        <h2>About Page</h2>
+        <hr />
+    </div>
+    <div>
+        <b>Ad - Soyad:</b> @Html.TextBox("text1") @* ViewBag.text1 içindeki datayı bastı *@
+        <br />
+        <b>Bool veri türü:</b> @Html.CheckBox("check1") @* ViewBag.check1 içindeki datayı bastı *@
+
+        @*Html. yardımcı methodlarında (string name) olanların hepside ViewBag içindeki aynı isimli data basılabilir*@
+        <br />
+        <b>DiplayText:</b> @Html.DisplayText("text1")
+        <br />
+        <b>DropdownList:</b> @Html.DropDownList("list1")
+        <br />
+        <b>Hidden:</b> @Html.Hidden("text1")
+        <br />
+        <b>Value:</b> @Html.Value("text1")
+    </div>
+    <div>
+        <input type="text" value="@ViewBag.text1" />
+    </div>
+    <hr />
+    <div>
+        @Html.ActionLink("Contact Page","contact")
+    </div>
+</body>
+</html>

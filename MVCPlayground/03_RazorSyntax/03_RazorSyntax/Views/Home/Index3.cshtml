@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>Index3</h2>
+
+<style>
+    .kirmizi
+    {
+        color:red;
+    }
+</style>
+
+<input id="text1" name="text1" type="text" />
+<br />
+<input id="button1" name="button1" type="button" value="Bana Tıkla" />
+<br />
+<a href="/Home/Index">Index Sayfasına Git!</a>
+
+<br />
+<hr />
+
+@Html.ActionLink("Index Sayafasına Git!", "Index")
+<br />
+@Html.ActionLink("Home2-Index Sayafasına Git!", "Index","Home2")
+<br />
+@Html.ActionLink("Home2-Index Sayafasına Git!", "Index", "Home2",new { deger = "turhan", deger2 = "yildirim"}, new { title = "home2 index sayfasına yönlendirir", @class = "kirmizi" }) 
+@* 
+    routeValues(querystring), htmlAttributes 
+    reserved keyword için mesela class başına @ koyarız kullanabilmek için
+*@
+<br />
+@Html.TextBox("text2", "Adınız")
+<br />
+@Html.TextArea("textarea1", "Özgeçmiş özetiniz", 8, 30, null)
+<br />
+@*
+    @Html.Button > YOK, custom yazılması gerek
+*@

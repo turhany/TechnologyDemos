@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+
+@{
+    string[] adlar = new string[3] { "Türhan", "Ahmet", "İlker" };
+    int index = 0;
+    <ul>
+        @foreach (string ad in adlar)
+        {
+        <li>
+            @if(index % 2 == 0)
+            {
+                <b>@ad</b>
+            }else
+            {
+                @ad
+            }
+
+        </li>
+            index++;
+        }
+    </ul>
+}
+
+<hr />
+
+@for (int i = 0; i < 10; i++)
+{
+    @("Sayı: " + i.ToString())<br />
+}

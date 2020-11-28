@@ -1,0 +1,40 @@
+﻿@model _12_MVC_EF_CodeFirst.Models.Adresler
+@{
+    ViewBag.Title = "Sil";
+}
+
+<h2>Adres Sil</h2>
+<hr />
+
+<p>
+    Aşağıdaki adres kaydını silmek istediğinizden emin misiniz?
+</p>
+
+<table>
+    <tr>
+        <td>Kişi:</td>
+        <td>@(Model.Kisi.Ad + " " + Model.Kisi.Soyad) </td>
+    </tr>
+    <tr>
+        <td>Ardes:</td>
+        <td>@Model.AdresTanimi</td>
+    </tr>
+</table>
+<br />
+@using (Html.BeginForm())
+{
+    <div class="input-group">
+        <input type="submit" value="Sil" class="btn btn-success" />
+    </div>
+    <br />
+}
+<div class="input-group">
+    @if (ViewBag.Result != null)
+    {
+        @Html.HiddenFor(x => x.ID)
+        <br />
+        <div class="alert alert-@ViewBag.Status" role="alert">
+            @ViewBag.Result
+        </div>
+    }
+</div>

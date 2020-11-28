@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage</title>
+</head>
+<body>
+    <div>
+
+        @*<form method="post" action="/">
+
+            </form>*@
+        @{
+            SelectListItem[] liste = new SelectListItem[3]
+                {
+                    new SelectListItem(){Text="item1",Value="1"},
+                    new SelectListItem(){Text="item2",Value="2"},
+                    new SelectListItem(){Text="item3",Value="3"}
+                };
+        }
+
+
+        @using (Html.BeginForm())
+            {
+            @Html.TextBox("text1")
+            <br />
+            @Html.DropDownList("list1", liste )
+            <br />
+            @("Onaylıyorum") @Html.CheckBox("check1")
+            <hr />
+            <input type="submit" value="Send" />
+        }
+    </div>
+</body>
+</html>

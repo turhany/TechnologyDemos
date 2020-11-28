@@ -1,0 +1,204 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage2</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+    @*
+        lg > large
+        md > laptop, desktop
+        sm > tablet
+        xs > phone
+    *@
+
+    <div class="container-fluid">
+        @*header*@
+        <div class="row">
+            <div class="col-xs-12">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Site Adı</a>
+
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/Home/homepage">Page1</a></li>
+                                <li><a href="/Home/homepage2">Page2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        @*body*@
+        <div class="row">
+            <div class="col-md-9">
+                <h2>Makaleler</h2>
+                <hr />
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Panel heading without title
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Panel content sadasd as das d as da sd as d as da sd as da sd as d sdfsdfsdfsdf sdfsdfsdfsdf
+                            <br />
+                            @*<a href="#" class="btn btn-primary btn-xs">More</a>*@
+                            @BootstrapHelper.Button(val:"More")
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        @for (int i = 0; i < 3; i++)
+                        {
+                            @BootstrapHelper.Tag("warning", "tag" + i.ToString())
+                        }
+                        @*<span class="label label-warning">tag1</span>&nbsp;
+                            <span class="label label-warning">tag2</span>&nbsp;
+                            <span class="label label-warning">tag3</span>*@
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Panel heading without title
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Panel content sadasd as das d as da sd as d as da sd as da sd as d sdfsdfsdfsdf sdfsdfsdfsdf
+                            <br />
+                            <a href="#" class="btn btn-primary btn-xs">More</a>
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <span class="label label-warning">tag1</span>&nbsp;
+                        <span class="label label-warning">tag2</span>&nbsp;
+                        <span class="label label-warning">tag3</span>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Panel heading without title
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Panel content sadasd as das d as da sd as d as da sd as da sd as d sdfsdfsdfsdf sdfsdfsdfsdf
+                            <br />
+                            <a href="#" class="btn btn-primary btn-xs">More</a>
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <span class="label label-warning">tag1</span>&nbsp;
+                        <span class="label label-warning">tag2</span>&nbsp;
+                        <span class="label label-warning">tag3</span>
+                    </div>
+                </div>
+
+                <p>sadasd as das d as da sd as d as da sd as da sd as d  sdfsdfsdfsdf sdfsdfsdfsdf</p>
+                <p>sadasd as das d as da sd as d as da sd as da sd as d  sdfsdfsdfsdf sdfsdfsdfsdf</p>
+                <p>sadasd as das d as da sd as d as da sd as da sd as d  sdfsdfsdfsdf sdfsdfsdfsdf</p>
+            </div>
+            <div class="col-md-2">
+                <h2>Kategoriler</h2>
+                <hr />
+                @*<ul>
+                    <li>
+                        <a href="#">Kategori 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Kategori 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Kategori 3</a>
+                    </li>
+                    <li>
+                        <a href="#">Kategori 4</a>
+                    </li>
+                    <li>
+                        <a href="#">Kategori 5</a>
+                    </li>
+                    <li>
+                        <a href="#">Kategori 6</a>
+                    </li>
+                </ul>*@
+                
+                @BootstrapHelper.LinkList("list1", "Kategori1", "Kategori2", "Kategori3")
+            </div>
+        </div>
+
+        @*footer*@
+        <div class="row">
+
+            <hr />
+
+            <div class="col-md-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                    <li>
+                        <a href="#">lorem ipsum</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 text-center">
+
+                <hr />
+                <span class="small">
+                    Tüm hakları saklıdır. &copy;
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

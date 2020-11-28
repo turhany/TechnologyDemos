@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "blog";
+    Layout = "~/Views/Shared/_LayoutPage4.cshtml";
+}
+
+<h2>blog</h2>
+
+<p>
+    Burada 1 paragraf metin var
+</p>
+
+@section links{
+    @* _LayoutPage4 içinde > links isimli section içine basılacak html *@
+
+    <li>
+        @Html.ActionLink("blog2", "blog2", "Home3")
+    </li>
+}
+
+@section footer{
+    <b>
+        Lütfen bu sayfayı kopyalamayınız.
+    </b>
+}

@@ -1,0 +1,21 @@
+﻿@using _11_HelperMethods.Models
+@model List<Message>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="container">
+    @*<div role="alert" class="alert alert-success">
+        lorem ipsum dolar sit amet
+    </div>*@
+    
+    @Html.Alert("alert1","danger", "lorem ipsum dolar sit amet")
+    
+    <hr/>
+
+    @foreach (Message item in Model)
+    {
+        @Html.AlertFor(x => item, new {title = item.Text, level = item.Level})
+    }
+</div>

@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>page1</title>
+</head>
+<body>
+    <div>
+        @Html.Partial("_PartialFaydaliLinkler")
+    </div>
+    <div>
+        @* shared içinde olmayan bir partialview çağırdık hata verdi *@
+        @*@Html.Partial("_PartialHomeLinks")*@
+
+        @* Klasör kırılımı ile isim vermek lazım, başka klasördeki partial çağırmak için *@
+        @Html.Partial("../Home/_PartialHomeLinks")
+    </div>
+</body>
+</html>

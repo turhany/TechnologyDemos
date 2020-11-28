@@ -1,0 +1,27 @@
+﻿@using _04_HelperMethods.Library
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.Button(text:"Onay")
+        <br />
+        @Html.Button("btnOk", ButtonType.button, "gönder")
+        <br />
+        <br />
+        @Html.ButtonWithTagBuilder(text: "Onay")
+        <br />
+        @Html.ButtonWithTagBuilder("btnOk","css", ButtonType.button, "gönder")
+        <br />
+        @Html.Paragraph("p1",4,"dashed",@<text> <b style="color:red;">Custom HTML Helpers</b> </text>)
+    </div>
+</body>
+</html>

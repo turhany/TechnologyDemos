@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage</title>
+</head>
+<body>
+    <div>
+        header
+        <hr />
+        <ul>
+            <li>
+                <a href="#">link1</a>
+            </li>
+            <li>
+                <a href="#">link2</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        body
+        <hr />
+
+        @*@Html.Partial("_PartialFaydaliLinkler")*@
+
+        @* Aşağıdaki gibide çağırılabilinir *@
+
+        @{ 
+            Html.RenderPartial("_PartialFaydaliLinkler");
+        }
+
+        <p>
+            sdsakiasd
+            asdasdasdşaksd asdkajsdkjalsjkd
+        </p>
+    </div>
+    <div>
+        footer
+        <hr />
+        @Html.Partial("_PartialFaydaliLinkler")
+    </div>
+</body>
+</html>

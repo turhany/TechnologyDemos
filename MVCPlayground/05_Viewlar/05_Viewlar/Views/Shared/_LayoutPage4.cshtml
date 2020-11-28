@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <style>
+        .block {
+            display: block;
+            margin: 10px;
+            border: 2px dotted gray;
+            padding: 10px;
+        }
+
+        #menu ul li {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid darkblue;
+            background-color: lightblue;
+            margin: 5px;
+            line-height:30px;         
+            vertical-align:middle;
+        }
+
+        #menu  a{
+            color:white;
+            text-decoration:none;
+            font-size:smaller;
+        }
+
+        #menu li:hover{
+            background-color:orange;
+        }
+
+        #menu li:hover a{
+            color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="menu" class="block">
+        @*Header*@
+        <ul>
+            <li>
+                @Html.ActionLink("Home Page", "homepage", "Home")
+            </li>
+            @RenderSection("links",false)
+        </ul>
+    </div>
+    <div class="block">
+        @RenderBody()
+    </div>
+    <div class="block">
+        @*Footer*@
+        @RenderSection("footer", false) @*Bu section zorunlu değilse false*@ 
+        <br />
+        <b>Tüm hakları saklıdır. &copy;</b>
+    </div>
+</body>
+</html>

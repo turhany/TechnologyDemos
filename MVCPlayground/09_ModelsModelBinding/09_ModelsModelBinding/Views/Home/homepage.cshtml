@@ -1,0 +1,52 @@
+﻿@*@using _09_ModelsModelBinding.Models
+@model Kisi*@
+
+@using _09_ModelsModelBinding.ViewModels
+@model homepageViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage</title>
+</head>
+<body>
+    <div>
+        <h2>Home Page</h2>
+        <hr />
+    </div>
+    <div>
+        <b>Ad: </b> @Model.KisiNesnesi.Ad
+        <br />
+        <b>Soyad: </b> @Model.KisiNesnesi.Soyad
+        <br />
+        <b>Yas: </b> @Model.KisiNesnesi.Yas
+        <hr />
+        <b>Ad - Soyad: </b> @(Model.KisiNesnesi.Ad + " " + Model.KisiNesnesi.Soyad))
+        <br />
+        <b>Adres: </b> @(Model.AdresNesnesi.AdresTanim + "/" + Model.AdresNesnesi.Sehir)
+    </div>
+    <hr />
+    <div>
+        @using (Html.BeginForm())
+        {
+            <b>Ad: </b> @Html.TextBoxFor(x => x.KisiNesnesi.Ad)
+            <br />
+            <b>Soyad: </b> @Html.TextBoxFor(x => x.KisiNesnesi.Soyad)
+            <br />
+            <b>Yas: </b> @Html.TextBoxFor(x => x.KisiNesnesi.Yas)
+            <br />
+            <b>Adres: </b> @Html.TextBoxFor(x => x.AdresNesnesi.AdresTanim)
+            <br />
+            <b>Şehir: </b> @Html.TextBoxFor(x => x.AdresNesnesi.Sehir)
+            <br />
+            <input type="submit" value="Gönder" />
+        }
+    </div>
+</body>
+</html>

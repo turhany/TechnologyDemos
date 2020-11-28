@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<!-- HTML Açıklama Satırı -->
+
+@{
+    string ad = "Türhan";
+    string soyad = "Yıldırım";
+    string adSoyad = ad + " " + soyad;
+
+    @*
+        Burası Razor Açıklama bloğudur.
+        Kullanıcı tarafına render olmaz
+    *@
+
+    <ul>
+        <li>
+            @ad
+        </li>
+        <li>
+            @soyad
+        </li>
+        <li>
+            <i>
+                @adSoyad
+            </i>
+        </li>
+    </ul>
+}
+
+<hr />
+
+@ad
+<br />
+@soyad
+<br />
+<b>@adSoyad</b>
+
+<hr />
+
+<br />
+<br />
+@ad + " " + soyad
+<br />
+@(ad + " " + soyad)
